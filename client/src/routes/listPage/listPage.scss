@@ -1,0 +1,110 @@
+// // @import "../../responsive.scss";
+
+// // .listPage {
+// //   display: flex;
+// //   height: 100%;
+
+// //   .listContainer {
+// //     flex: 3;
+// //     height: 100%;
+
+// //     .wrapper{
+// //       height: 100%;
+// //       padding-right: 50px;
+// //       display: flex;
+// //       flex-direction: column;
+// //       gap: 50px;
+// //       overflow-y: scroll;
+// //       padding-bottom: 50px;
+// //     }
+// //   }
+// //   .mapContainer {
+// //     flex: 2;
+// //     height: 100%;
+// //     background-color: #fcf5f3;
+
+// //     @include md{
+// //       display: none;
+// //     }
+// //   }
+// // }
+
+// @import "../../responsive.scss";
+
+// .listPage {
+//   display: flex;
+//   height: 100%;
+
+//   .listContainer {
+//     flex: 3;
+//     height: 100%;
+
+//     .wrapper{
+//       height: 100%;
+//       padding-right: 50px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 50px;
+//       overflow-y: scroll;
+//       padding-bottom: 50px;
+//     }
+//   }
+//   .mapContainer {
+//     flex: 2;
+//     height: 100%;
+//     background-color: #fcf5f3;
+
+//     @include md{
+//       display: none;
+//     }
+//   }
+// }
+
+@import "../../responsive.scss";
+
+.listPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+    padding: 20px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 100%;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+    }
+  }
+
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+
+    @include md {
+      display: block; // Make map visible on medium and large screens
+    }
+
+    @include sm {
+      display: none; // Hide map on small screens
+    }
+  }
+
+  // Adjust layout on medium and larger screens
+  @include md {
+    flex-direction: row;
+  }
+
+  // Handle smaller screens by adding padding and spacing
+  @include sm {
+    .mapContainer {
+      margin-top: 30px;
+    }
+  }
+}
