@@ -8,7 +8,8 @@
     "dev": "nodemon api/app.js",
     "start": "node api/app.js",
     "build": "npm install && npm install --prefix client && npm install --prefix socket && npm run build --prefix client",
-    "socket": "nodemon socket/app.js"
+    "socket": "nodemon socket/app.js",
+    "postinstall": "npx prisma generate"  
   },
   "keywords": ["estate", "real-estate", "API", "backend"],
   "author": "Your Name",
